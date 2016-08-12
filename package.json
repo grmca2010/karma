@@ -6,9 +6,18 @@
   "dependencies": {},
   "devDependencies": {
     "jasmine-core": "^2.4.1",
-    "karma": "^1.2.0",
-    "karma-chrome-launcher": "^1.0.1",
-    "karma-jasmine": "^1.0.2"
+    "karma": "~0.10",
+    "karma-jasmine": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.12",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-coverage": "^0.2.7",
+    "phantomjs": "^1.9.16",
+    "grunt": "~0.4.5",
+    "grunt-bower-task": "^0.4.0",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-karma": "0.7.1"
   },
   "scripts": {
     "test": "karma start karma.conf.js"

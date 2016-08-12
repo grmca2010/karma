@@ -4,18 +4,30 @@
 module.exports = function(config) {
   config.set({
 
+    // Start these browsers, currently available:
+    // - Chrome
+    // - ChromeCanary
+    // - Firefox
+    // - Opera (has to be installed with `npm install karma-opera-launcher`)
+    // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
+    // - PhantomJS
+    // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
+    browsers : ["PhantomJS"],
+    phantomjsLauncher: {
+        exitOnResourceError: true
+    },
+    plugins : ['karma-phantomjs-launcher','karma-jasmine'],
+
     basePath : './',
     // frameworks to use
     frameworks: ['jasmine'],
 
     // list of files / patterns to load in the browser
     files: [
-      'bower_components/jquery/dist/jquery.min.js',
       {pattern: 'scripts/*.js', included: true,served: true},
-      {pattern: 'specs/*.js', included: true,served: true}
+      {pattern: 'specs/*.js', included: true,served: true},
+      {pattern: 'templates/*.html', included: true,served: true}
     ],
-
-    plugins : ['karma-chrome-launcher','karma-jasmine'],
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
@@ -41,15 +53,6 @@ module.exports = function(config) {
     autoWatch: true,
 
 
-    // Start these browsers, currently available:
-    // - Chrome
-    // - ChromeCanary
-    // - Firefox
-    // - Opera (has to be installed with `npm install karma-opera-launcher`)
-    // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
-    // - PhantomJS
-    // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers : ['Chrome'],
 
     preprocessors: {
         "**/*.html": []
