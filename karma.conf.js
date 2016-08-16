@@ -1,6 +1,4 @@
 // Karma configuration
-// Generated on Wed Feb 05 2014 14:57:27 GMT+0000 (GMT)
-
 module.exports = function(config) {
   config.set({
 
@@ -16,7 +14,7 @@ module.exports = function(config) {
     phantomjsLauncher: {
         exitOnResourceError: true
     },
-    plugins : ['karma-phantomjs-launcher','karma-jasmine'],
+    plugins : ['karma-phantomjs-launcher','karma-jasmine','karma-chrome-launcher'],
 
     basePath : './',
     // frameworks to use
@@ -24,6 +22,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      "lib/*.js",
       {pattern: 'scripts/*.js', included: true,served: true},
       {pattern: 'specs/*.js', included: true,served: true},
       {pattern: 'templates/*.html', included: true,served: true}

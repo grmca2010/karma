@@ -15,7 +15,7 @@ module.exports = function(grunt) {
             '-W030': true,
             laxcomma    :   true
           },
-          src: ['Gruntfile.js', 'src/js/**/*.js', 'tests/specs/**/*.js']
+          src: ['Gruntfile.js', 'scripts/js/*.js', '/specs/*.js']
         }
     },
 
@@ -26,7 +26,13 @@ module.exports = function(grunt) {
             singleRun: true,
             browsers: ['PhantomJS'],
             autoWatch : false
-       }
+       },
+       chrome: {
+           configFile: 'karma.conf.js',
+           singleRun: true,
+           browsers: ['Chrome', 'Chrome_without_security'],
+           autoWatch : false
+      }
     }
   });
 
