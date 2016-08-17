@@ -4,16 +4,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    clean: {
-       build    :   ['build']
-    },
-
     jshint: {
         all: {
-          options: {
-            '-W099': true,
-            '-W030': true,
-            laxcomma    :   true
+          curly: true,
+          eqeqeq: true,
+          eqnull: true,
+          browser: true,
+          globals: {
+            jQuery: true
           },
           src: ['Gruntfile.js', 'scripts/js/*.js', '/specs/*.js']
         }
