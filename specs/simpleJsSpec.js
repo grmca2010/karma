@@ -12,7 +12,7 @@ describe("Spec - variable", function() {
 
 describe("Spec - Dom manipulation", function() {
   it("The page should contains the div tag with header tag", function() {
-    expect($("div#header").length).toEqual(2);
+    expect($("div#header").length).toEqual(1);
   //  expect(false).toEqual(false);
   });
 });

@@ -1,3 +1,3 @@
 var a="Hello World";
 
-jQuery("body").append('<div id="header">Hello</div>')
+jQuery("body").append('<div id="header">Hello</div>');

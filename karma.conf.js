@@ -10,11 +10,11 @@ module.exports = function(config) {
     // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
     // - PhantomJS
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers : ["PhantomJS"],
+    browsers : [],
     phantomjsLauncher: {
         exitOnResourceError: true
     },
-    plugins : ['karma-phantomjs-launcher','karma-jasmine','karma-chrome-launcher'],
+    plugins : ['karma-jasmine','karma-chrome-launcher'],
 
     basePath : './',
     // frameworks to use

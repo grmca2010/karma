@@ -13,7 +13,7 @@ module.exports = function(grunt) {
           globals: {
             jQuery: true
           },
-          src: ['Gruntfile.js', 'scripts/js/*.js', '/specs/*.js']
+          src: ['Gruntfile.js', 'scripts/*.js', '/specs/*.js']
         }
     },
 
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
        chrome: {
            configFile: 'karma.conf.js',
            singleRun: true,
-           browsers: ['Chrome', 'Chrome_without_security'],
+           browsers: ['Chrome'],
            autoWatch : false
       }
     }
